@@ -1,4 +1,5 @@
 package testchain2;
+import java.util.ArrayList;
 import java.util.Base64;
 
 import java.security.*;
@@ -23,6 +24,11 @@ public class StringUtil {
 			throw new RuntimeException(e);
 		}
 	}	
+	
+	//Returns difficulty string target, to compare to hash. eg difficulty of 5 will return "00000"  
+		public static String getDificultyString(int difficulty) {
+			return new String(new char[difficulty]).replace('\0', '0');
+		}
 	
 	//Applies ECDSA Signature and returns the result ( as bytes ).
 			public static byte[] applyECDSASig(PrivateKey privateKey, String input) {

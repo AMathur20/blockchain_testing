@@ -147,4 +147,3 @@ public class Testchain2 {
 		blockchain.add(newBlock);
 	}
 }
-}
